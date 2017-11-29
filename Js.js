@@ -9,22 +9,37 @@ SecondBoul.classList.add = "pickle"
 var ThirdBoul = document.getElementsByClassName("meatball")[2]
 ThirdBoul.style.width = "90px"
 var Tomato = document.getElementsByClassName("tomato")[0]
-Tomato.style.backgroundcolor = "blue";
+Tomato.style.backgroundColor = "blue"
 var cheese = document.querySelectorAll(".cheese")
 
-var cheese1 = document.querySelectorAll(".cheese")[0]
 
-var copy = JSON.parse(JSON.stringify(cheese1));
+for( i=0; i < cheese.length ; i++){
+    cheese[i].style.borderRadius = "15px"}
 
-document.querySelectorAll(".cheese")[2].appendChild(copy);
+var cheese1 = document.querySelectorAll(".cheese")[0].cloneNode()
 
+var patt = document.getElementsByClassName("patty")[1]
 
+burg = document.getElementsByClassName("burger")[0]   
 
-
+burg.insertBefore(cheese1,patt)
 
 var painDuBas = document.getElementsByClassName("bun-bottom")[0]
 
-painDuBas.setAttribute(id, "bottom")
+painDuBas.setAttribute("id", "bottom")
+
+var lien = document.getElementsByTagName("a")[0]
+
+lien.addEventListener("click", function (e) {
+    
+    lien.setAttribute("href","https://www.google.fr")
+
+    window.open(lien);
+});
+
+var plat = document.getElementsByClassName("plate")[0].cloneNode()
+
+document.getElementsByClassName("burger")[0].appendChild(plat)
 
 
 
